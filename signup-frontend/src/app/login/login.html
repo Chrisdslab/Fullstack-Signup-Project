@@ -1,0 +1,22 @@
+<div style="max-width: 400px; margin: 50px auto; font-family: Arial, sans-serif;">
+  <h2>Login</h2>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div style="margin-bottom: 15px;">
+      <label>Email</label><br>
+      <input type="email" formControlName="email" style="width: 100%; padding: 8px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label>Password</label><br>
+      <input type="password" formControlName="password" style="width: 100%; padding: 8px;">
+    </div>
+    
+    <button type="submit" [disabled]="loginForm.invalid" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+      Login
+    </button>
+    <br><br>
+    
+    <a routerLink="/signup">Don't have an account? Sign up here.</a>
+  </form>
+</div>
